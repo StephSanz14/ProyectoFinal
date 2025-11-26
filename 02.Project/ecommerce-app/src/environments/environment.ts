@@ -1,3 +1,3 @@
 export const environment = {
-    BACK_URL:'https://proyectofinal-1-tm89.onrender.com/api'
+    BACK_URL:'https://proyectofinal-tp1f.onrender.com/api' //domonio del backend
 };
