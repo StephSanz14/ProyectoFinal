@@ -12,7 +12,7 @@ dotenv.config();
 
 setupGlobalErrorHandlers();
 
-const allowedOrigins = [
+const allowedOrigins = [ 
   'http://localhost:4200',
   'https://proyectofinal-1-tm89.onrender.com', //Agregando dominios
 ];
