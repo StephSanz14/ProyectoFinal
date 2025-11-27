@@ -12,12 +12,28 @@ dotenv.config();
 
 setupGlobalErrorHandlers();
 
+const allowedOrigins = [
+  'http://localhost:4200',
+  'https://proyectofinal-1-tm89.onrender.com', //Agregando dominios
+];
+
 const app = express();
 dbConnection();
 console.log("CORS ORIGIN:", process.env.FRONT_APP_URL);
 app.use(
   cors({
-    origin: process.env.FRONT_APP_URL,
+
+    origin(origin, callback) {
+      // Para Postman o llamadas sin origin
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error('Not allowed by CORS'));
+    },
+
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
     optionsSuccessStatus: 200,
