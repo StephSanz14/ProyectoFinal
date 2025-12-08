@@ -1,4 +1,4 @@
-import Order from '../models/order.js';
+import Order from '../models/order.js'; 
 import errorHandler from '../middlewares/errorHandler.js';
 
 async function getOrders(req, res) {
