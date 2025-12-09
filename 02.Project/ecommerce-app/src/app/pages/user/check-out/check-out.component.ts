@@ -69,7 +69,7 @@ export class CheckOutComponent implements OnInit{
     this.paymenthMethodId=id;
   }
 
-  submitOrder(){
+  submitOrder(){ 
     const cart = this.cartSignal();
     const user = this.getUserId();
 
