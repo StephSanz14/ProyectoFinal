@@ -14,7 +14,7 @@ import isAdmin from '../middlewares/isAdminMiddleware.js';
 
 const router = express.Router();
 
-// Obtener todos los carritos (admin)
+// Obtener todos los carritos (admin) 
 router.get('/cart', authMiddleware, isAdmin, getCarts);
 // Obtener carrito por usuario
 router.get('/cart/user/:id', authMiddleware, getCartByUser);
