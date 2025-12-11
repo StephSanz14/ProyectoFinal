@@ -8,7 +8,7 @@ import orderRoutes from './orderRoutes.js';
 import paymentMethodRoutes from './paymentMethodRoutes.js'; 
 import productRoutes from './productRoutes.js';
 import userRoutes from './userRoutes.js';
-import wishListRoutes from './wishListRoutes.js';
+import wishlistRoutes from './wishListRoutes.js';
 import shippingAddressRoutes from './shippingAddressRoutes.js';
 
 const router = express.Router();
@@ -17,7 +17,7 @@ router.use('/auth', authRoutes);
 router.use('/users', userRoutes);
 router.use('/shipping-address', shippingAddressRoutes);
 router.use(cartRoutes);
-router.use('/wishlist',wishListRoutes); 
+router.use('/wishlist',wishlistRoutes); 
 router.use(categoryRoutes);
 router.use(notificationRoutes);
 router.use(orderRoutes);
