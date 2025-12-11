@@ -13,6 +13,9 @@ import authMiddleware from '../middlewares/auth.js'; // Middleware de autenticac
 
 const router = express.Router();
 
+console.log('>>> wishListRoutes CARGADO');
+
+
 // Obtener la wishlist del usuario
 router.get('/', authMiddleware, getUserWishList);
 

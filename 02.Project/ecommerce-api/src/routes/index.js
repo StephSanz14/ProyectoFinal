@@ -17,7 +17,11 @@ router.use('/auth', authRoutes);
 router.use('/users', userRoutes);
 router.use('/shipping-address', shippingAddressRoutes);
 router.use(cartRoutes);
-router.use('/wishlist',wishListRoutes);
+/* router.use('/wishlist',wishListRoutes); */
+router.use('/wishlist', (req, res, next) => {
+  console.log('>>> PASANDO POR /wishlist EN INDEX:', req.method, req.url);
+  next();
+}, wishListRoutes);
 router.use(categoryRoutes);
 router.use(notificationRoutes);
 router.use(orderRoutes);
