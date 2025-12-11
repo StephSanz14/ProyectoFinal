@@ -9,11 +9,8 @@ import {
   checkProductInWishList,
   moveToCart
 } from '../controllers/wishListController.js';
-import authMiddleware from '../middlewares/auth.js'; // Middleware de autenticación
-
+import authMiddleware from '../middlewares/authMiddleware.js';
 const router = express.Router();
-
-console.log('>>> wishListRoutes CARGADO');
 
 
 // Obtener la wishlist del usuario
